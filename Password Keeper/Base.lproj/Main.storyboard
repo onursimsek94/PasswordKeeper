@@ -7,7 +7,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="HHp-lj-uRU">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ibp-ex-rpl" customClass="SettingsViewController" customModule="Password_Keeper" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,7 +145,7 @@
                             <constraint firstItem="rBV-4x-A3o" firstAttribute="leading" secondItem="xaY-Mh-7Q8" secondAttribute="trailing" constant="16" id="yL0-a4-VmT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Vvb-xc-Vfz"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" id="Vvb-xc-Vfz"/>
                     <navigationItem key="navigationItem" id="vHK-5m-Hws"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="ghx-lg-9L7" id="EfR-Ix-5EY"/>
@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="1429" y="847"/>
         </scene>
-        <!--Accounts View Controller-->
+        <!--Accounts-->
         <scene sceneID="WtN-IS-Yxh">
             <objects>
                 <viewController storyboardIdentifier="AccountsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S2z-BB-6J5" customClass="AccountsViewController" customModule="Password_Keeper" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +232,7 @@
                             <constraint firstItem="oew-Bi-u1J" firstAttribute="bottom" secondItem="n7C-il-84p" secondAttribute="top" id="qad-f7-io9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" systemItem="mostViewed" id="t6J-DM-twI"/>
+                    <tabBarItem key="tabBarItem" title="Accounts" image="AccountsIcon" id="t6J-DM-twI"/>
                     <connections>
                         <outlet property="accountsTableView" destination="oew-Bi-u1J" id="4AE-M3-4fi"/>
                     </connections>
@@ -876,7 +876,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AccountsIcon" width="32" height="32"/>
         <image name="PasswordKeeperBackground2" width="400" height="600"/>
+        <image name="SettingsIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="O30-66-Ph3"/>

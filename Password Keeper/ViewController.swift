@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println(DeviceHelper().getDeviceModel())
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -59,8 +57,6 @@ class ViewController: UIViewController {
                 
             }
         }))
-
-//        LoginAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
         
         if result.count > 0{
             
@@ -111,8 +107,6 @@ class ViewController: UIViewController {
                     
                 }
             }))
-
-//            SignUpAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
             
             self.presentViewController(SignUpAlert, animated: true, completion: nil)
             

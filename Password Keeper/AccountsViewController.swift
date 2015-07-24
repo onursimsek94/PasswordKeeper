@@ -76,8 +76,6 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
                 }
                 context.save(nil)
                 
-//                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-                
                 self.getAccountsAndReloadData()
                 
             }))
