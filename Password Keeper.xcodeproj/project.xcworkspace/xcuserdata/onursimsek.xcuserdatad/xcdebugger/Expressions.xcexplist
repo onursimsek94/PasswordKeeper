@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "function signature specialization &lt;Arg[1] = Dead, Arg[2] = Value Promoted from InOut, Arg[4] = Dead, Arg[5] = Value Promoted from InOut&gt; of Password_Keeper.ViewController.(viewDidAppear (Password_Keeper.ViewController) -&gt; (Swift.Bool) -&gt; ()).(closure #2):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "passwordTextField.text">
+            </PersistentString>
+            <PersistentString
+               value = "result[0].password">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.AccountsViewController.prepareForSegue (Password_Keeper.AccountsViewController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():AccountsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sendAccount">
+            </PersistentString>
+            <PersistentString
+               value = "sendAccount[0!].title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.AccountsViewController.getAccountsAndReloadData (Password_Keeper.AccountsViewController)() -&gt; ():AccountsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "accounts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.AccountsViewController.viewDidLoad (Password_Keeper.AccountsViewController)() -&gt; ():AccountsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "accounts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.DeviceHelper.getDeviceWidthHeight (Password_Keeper.DeviceHelper)() -&gt; Swift.String:DeviceHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIDevice.currentDevice().model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.ViewController.viewDidLoad (Password_Keeper.ViewController)() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIDevice">
+            </PersistentString>
+            <PersistentString
+               value = "UIDevice.currentDevice()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.AccountDetailViewController.viewDidLoad (Password_Keeper.AccountDetailViewController)() -&gt; ():AccountDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sendAccount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "function signature specialization &lt;Arg[1] = Dead, Arg[2] = Value Promoted from InOut&gt; of Password_Keeper.ViewController.(signUpButton (Password_Keeper.ViewController) -&gt; (ObjectiveC.UIButton) -&gt; ()).(closure #4):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "password.text">
+            </PersistentString>
+            <PersistentString
+               value = "confirmPassword.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
