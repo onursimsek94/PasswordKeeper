@@ -35,6 +35,8 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         var request = NSFetchRequest(entityName: "PasswordKeeperAccounts")
         request.returnsObjectsAsFaults = false
+        var sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
         accounts = context.executeFetchRequest(request, error: nil)!
         
         accountsTableView.reloadData();
