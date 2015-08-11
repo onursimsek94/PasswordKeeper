@@ -9,11 +9,13 @@
 import UIKit
 import CoreData
 
-class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     var accounts:NSArray = []
+    var filteredAccounts:NSMutableArray = []
     
     @IBOutlet weak var accountsTableView: UITableView!
+    @IBOutlet weak var accountsSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
     func getAccountsAndReloadData(){
         
         accounts = []
+        filteredAccounts = []
+        accountsSearchBar.text = ""
         var appDel:AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         var context:NSManagedObjectContext = appDel.managedObjectContext!
         var request = NSFetchRequest(entityName: "PasswordKeeperAccounts")
@@ -48,14 +52,22 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return accounts.count
+        if filteredAccounts.count > 0 {
+            return filteredAccounts.count
+        } else {
+            return accounts.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = accountsTableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         
-        cell.textLabel?.text = accounts[indexPath.row].title
-        println(accounts[indexPath.row])
+        if filteredAccounts.count > 0 {
+            cell.textLabel?.text = filteredAccounts[indexPath.row].title
+        } else {
+            cell.textLabel?.text = accounts[indexPath.row].title
+        }
+        
         return cell
     }
     
@@ -71,11 +83,25 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
                 let request = NSFetchRequest(entityName: "PasswordKeeperAccounts")
                 var result = context.executeFetchRequest(request, error: nil)!
                 
-                for item in result {
-                    if item as! NSManagedObject == self.accounts[indexPath.row] as! NSManagedObject{
-                        context.deleteObject(item as! NSManagedObject)
+                if self.filteredAccounts.count > 0 {
+                    
+                    for item in result {
+                        if item as! NSManagedObject == self.filteredAccounts[indexPath.row] as! NSManagedObject{
+                            context.deleteObject(item as! NSManagedObject)
+                        }
                     }
+                    
+                    
+                } else {
+                    
+                    for item in result {
+                        if item as! NSManagedObject == self.accounts[indexPath.row] as! NSManagedObject{
+                            context.deleteObject(item as! NSManagedObject)
+                        }
+                    }
+                    
                 }
+                
                 context.save(nil)
                 
                 self.getAccountsAndReloadData()
@@ -89,13 +115,38 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredAccounts = []
+        if count(accountsSearchBar.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) >= 2 {
+            
+            for item in accounts {
+                
+                if count(accountsSearchBar.text) <= count(item.title!!) && accountsSearchBar.text.lowercaseString == item.title!!.substringToIndex(advance(item.title!!.startIndex, count(accountsSearchBar.text))).lowercaseString {
+                    
+                    filteredAccounts.addObject(item)
+                    
+                }
+                
+            }
+            
+        }
+        accountsTableView.reloadData();
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "AccountDetailSegue"{
             
             let accountDetailViewController = segue.destinationViewController as! AccountDetailViewController
             let index = accountsTableView.indexPathForSelectedRow()?.row
-            accountDetailViewController.accountDetail = accounts[index!] as! NSObject
+            if filteredAccounts.count > 0 {
+                
+                accountDetailViewController.accountDetail = filteredAccounts[index!] as! NSObject
             
+            } else {
+            
+                accountDetailViewController.accountDetail = accounts[index!] as! NSObject
+            
+            }
         }
     }
 

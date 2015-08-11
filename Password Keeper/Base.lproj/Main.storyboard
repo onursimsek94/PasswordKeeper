@@ -169,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PasswordKeeperBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="rnE-RA-VYg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasswordKeeperBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="rnE-RA-VYg">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
@@ -191,8 +191,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oew-Bi-u1J">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oew-Bi-u1J">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="disclosureIndicator" rowHeight="49" id="ytH-3Z-1NK">
@@ -214,26 +214,35 @@
                                     <outlet property="delegate" destination="S2z-BB-6J5" id="uX7-nG-bLA"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QXM-BL-cwx">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="S2z-BB-6J5" id="Nue-mo-wue"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oew-Bi-u1J" firstAttribute="top" secondItem="VCc-66-Est" secondAttribute="bottom" id="2aN-Oq-Tl3"/>
-                            <constraint firstAttribute="centerX" secondItem="rnE-RA-VYg" secondAttribute="centerX" id="UTe-dF-gmZ"/>
-                            <constraint firstItem="VCc-66-Est" firstAttribute="top" secondItem="wTj-th-sHq" secondAttribute="bottom" id="VEL-fQ-eh2"/>
-                            <constraint firstItem="VCc-66-Est" firstAttribute="leading" secondItem="rnE-RA-VYg" secondAttribute="leading" id="XCk-7C-e5F"/>
-                            <constraint firstItem="rnE-RA-VYg" firstAttribute="leading" secondItem="evW-rQ-vUo" secondAttribute="leading" id="XXA-Eu-8QH"/>
-                            <constraint firstItem="n7C-il-84p" firstAttribute="top" secondItem="rnE-RA-VYg" secondAttribute="bottom" constant="-49" id="cLe-OW-TMz"/>
-                            <constraint firstAttribute="trailing" secondItem="rnE-RA-VYg" secondAttribute="trailing" id="cWS-m8-2v3"/>
-                            <constraint firstItem="rnE-RA-VYg" firstAttribute="trailing" secondItem="VCc-66-Est" secondAttribute="trailing" id="cqs-zE-YXp"/>
-                            <constraint firstItem="VCc-66-Est" firstAttribute="trailing" secondItem="oew-Bi-u1J" secondAttribute="trailing" id="dcU-Xu-UXd"/>
-                            <constraint firstItem="VCc-66-Est" firstAttribute="leading" secondItem="oew-Bi-u1J" secondAttribute="leading" id="jLt-4o-T89"/>
-                            <constraint firstAttribute="centerY" secondItem="rnE-RA-VYg" secondAttribute="centerY" id="m8d-iy-j95"/>
-                            <constraint firstItem="rnE-RA-VYg" firstAttribute="top" secondItem="evW-rQ-vUo" secondAttribute="top" id="n3L-8O-sUy"/>
-                            <constraint firstItem="oew-Bi-u1J" firstAttribute="bottom" secondItem="n7C-il-84p" secondAttribute="top" id="qad-f7-io9"/>
+                            <constraint firstItem="VCc-66-Est" firstAttribute="top" secondItem="wTj-th-sHq" secondAttribute="bottom" id="9Fk-V7-Nzr"/>
+                            <constraint firstItem="rnE-RA-VYg" firstAttribute="top" secondItem="wTj-th-sHq" secondAttribute="bottom" constant="-20" id="DDO-aS-xdR"/>
+                            <constraint firstItem="oew-Bi-u1J" firstAttribute="leading" secondItem="QXM-BL-cwx" secondAttribute="leading" id="IdO-UL-EYG"/>
+                            <constraint firstItem="VCc-66-Est" firstAttribute="leading" secondItem="rnE-RA-VYg" secondAttribute="leading" id="JeN-zb-jPc"/>
+                            <constraint firstItem="VCc-66-Est" firstAttribute="leading" secondItem="evW-rQ-vUo" secondAttribute="leading" id="Kyy-QY-dyZ"/>
+                            <constraint firstItem="oew-Bi-u1J" firstAttribute="bottom" secondItem="n7C-il-84p" secondAttribute="top" id="QSI-5D-SWH"/>
+                            <constraint firstItem="rnE-RA-VYg" firstAttribute="bottom" secondItem="n7C-il-84p" secondAttribute="top" id="TIt-ye-25t"/>
+                            <constraint firstItem="QXM-BL-cwx" firstAttribute="top" secondItem="VCc-66-Est" secondAttribute="bottom" id="UMw-G4-55q"/>
+                            <constraint firstItem="oew-Bi-u1J" firstAttribute="trailing" secondItem="QXM-BL-cwx" secondAttribute="trailing" id="US7-hV-Ge3"/>
+                            <constraint firstItem="VCc-66-Est" firstAttribute="leading" secondItem="QXM-BL-cwx" secondAttribute="leading" id="USy-X4-Pd4"/>
+                            <constraint firstItem="oew-Bi-u1J" firstAttribute="top" secondItem="QXM-BL-cwx" secondAttribute="bottom" id="UfY-B0-T50"/>
+                            <constraint firstAttribute="trailing" secondItem="VCc-66-Est" secondAttribute="trailing" id="ZjE-hf-E9O"/>
+                            <constraint firstItem="QXM-BL-cwx" firstAttribute="trailing" secondItem="rnE-RA-VYg" secondAttribute="trailing" id="m8k-Yx-sJe"/>
+                            <constraint firstItem="VCc-66-Est" firstAttribute="trailing" secondItem="QXM-BL-cwx" secondAttribute="trailing" id="rwu-EZ-iWi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Accounts" image="AccountsIcon" id="t6J-DM-twI"/>
                     <connections>
+                        <outlet property="accountsSearchBar" destination="QXM-BL-cwx" id="vPL-Br-x8Q"/>
                         <outlet property="accountsTableView" destination="oew-Bi-u1J" id="4AE-M3-4fi"/>
                     </connections>
                 </viewController>
@@ -881,7 +890,7 @@
         <image name="SettingsIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="1GT-Kv-K6d"/>
         <segue reference="O30-66-Ph3"/>
-        <segue reference="E03-Kf-8Rh"/>
     </inferredMetricsTieBreakers>
 </document>
