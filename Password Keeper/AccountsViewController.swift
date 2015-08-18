@@ -117,7 +117,7 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         filteredAccounts = []
-        if count(accountsSearchBar.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) >= 2 {
+        if count(accountsSearchBar.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())) >= 0 {
             
             for item in accounts {
                 

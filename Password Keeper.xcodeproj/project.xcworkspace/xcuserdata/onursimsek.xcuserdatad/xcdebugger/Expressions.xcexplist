@@ -3,13 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "function signature specialization &lt;Arg[1] = Dead, Arg[2] = Value Promoted from InOut, Arg[4] = Dead, Arg[5] = Value Promoted from InOut&gt; of Password_Keeper.ViewController.(viewDidAppear (Password_Keeper.ViewController) -&gt; (Swift.Bool) -&gt; ()).(closure #2):ViewController.swift">
+         contextName = "Password_Keeper.AccountsViewController.getAccountsAndReloadData (Password_Keeper.AccountsViewController)() -&gt; ():AccountsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "passwordTextField.text">
-            </PersistentString>
-            <PersistentString
-               value = "result[0].password">
+               value = "accounts">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -25,37 +22,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Password_Keeper.AccountsViewController.getAccountsAndReloadData (Password_Keeper.AccountsViewController)() -&gt; ():AccountsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "accounts">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "Password_Keeper.AccountsViewController.viewDidLoad (Password_Keeper.AccountsViewController)() -&gt; ():AccountsViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "accounts">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "Password_Keeper.DeviceHelper.getDeviceWidthHeight (Password_Keeper.DeviceHelper)() -&gt; Swift.String:DeviceHelper.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "UIDevice.currentDevice().model">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "Password_Keeper.ViewController.viewDidLoad (Password_Keeper.ViewController)() -&gt; ():ViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "UIDevice">
-            </PersistentString>
-            <PersistentString
-               value = "UIDevice.currentDevice()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -75,6 +45,55 @@
             </PersistentString>
             <PersistentString
                value = "confirmPassword.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.AccountsViewController.tableView (Password_Keeper.AccountsViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:AccountsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "filteredAccounts.count">
+            </PersistentString>
+            <PersistentString
+               value = "filteredAccounts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.ViewController.viewDidLoad (Password_Keeper.ViewController)() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIDevice">
+            </PersistentString>
+            <PersistentString
+               value = "UIDevice.currentDevice()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.AccountsViewController.searchBar (Password_Keeper.AccountsViewController)(ObjectiveC.UISearchBar, textDidChange : Swift.String) -&gt; ():AccountsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "filteredAccounts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Password_Keeper.DeviceHelper.getDeviceWidthHeight (Password_Keeper.DeviceHelper)() -&gt; Swift.String:DeviceHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIDevice.currentDevice().model">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "function signature specialization &lt;Arg[1] = Dead, Arg[2] = Value Promoted from InOut, Arg[4] = Dead, Arg[5] = Value Promoted from InOut&gt; of Password_Keeper.ViewController.(viewDidAppear (Password_Keeper.ViewController) -&gt; (Swift.Bool) -&gt; ()).(closure #2):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "passwordTextField.text">
+            </PersistentString>
+            <PersistentString
+               value = "result[0].password">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
